@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-image: linear-gradient(90deg, #9331d4, rgb(239 5 92 / 70%));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-container {
+    color: #fff;
+    text-align: center;
+}
+
+.piano-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piano-keys-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.piano-keys {
+    width: 5rem;
+    height: 20rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.white-key {
+    background-color: #fff;
+}
+
+.black-key {
+    width: 2rem;
+    height: 13rem;
+    background-color: #000;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 2;
+    margin: 0 -20px;
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .piano-keys {
+        width: 4rem;
+    }
+}
+
+/* Small tablets */
+@media screen and (max-width: 820px) {
+    .piano-keys {
+        width: 3.5rem;
+        height: 16rem;
+    }
+
+    .black-key {
+        height: 10rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    .piano-container {
+        width: 90%;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .piano-keys {
+        width: 3.5rem;
+        height: 16rem;
+    }
+
+    .black-key {
+        width: 1.8rem;
+        height: 10rem;
+    }
+}
